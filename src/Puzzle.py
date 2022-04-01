@@ -62,7 +62,7 @@ def GetListKurangAndSum(puzzle_board):
     return kurang_sum, list_kurang
 
 
-def g_cost(puzzle_board):
+def Get_g_cost(puzzle_board):
     # Menghitung jumlah ubin tidak kosong dalam list puzzle_board yang tidak berada pada # tempat sesuai susunan akhir (goal state)
     cost = 0
     for i in range(15):
@@ -87,28 +87,28 @@ def GetPossibleNodes(node_count, prioq_bnb, puzzle_node):
         node_count += 1
         new_node = PuzzleNode(puzzle_board, new_depth, puzzle_board)
         Swap(new_node.puzzle_board, empty_idx, empty_idx + 1)
-        new_node.g_cost = g_cost(new_node.puzzle_board)
+        new_node.g_cost = Get_g_cost(new_node.puzzle_board)
         heappush(prioq_bnb, (new_depth + new_node.g_cost, node_count, new_node))
 
     if(empty_idx % 4 != 0):
         node_count += 1
         new_node = PuzzleNode(puzzle_board, new_depth, puzzle_board)
         Swap(new_node.puzzle_board, empty_idx, empty_idx - 1)
-        new_node.g_cost = g_cost(new_node.puzzle_board)
+        new_node.g_cost = Get_g_cost(new_node.puzzle_board)
         heappush(prioq_bnb, (new_depth + new_node.g_cost, node_count, new_node))
 
     if(empty_idx - 3 > 0):
         node_count += 1
         new_node = PuzzleNode(puzzle_board, new_depth, puzzle_board)
         Swap(new_node.puzzle_board, empty_idx, empty_idx - 4)
-        new_node.g_cost = g_cost(new_node.puzzle_board)
+        new_node.g_cost = Get_g_cost(new_node.puzzle_board)
         heappush(prioq_bnb, (new_depth + new_node.g_cost, node_count, new_node))
 
     if(empty_idx + 3 < 15):
         node_count += 1
         new_node = PuzzleNode(puzzle_board, new_depth, puzzle_board)
         Swap(new_node.puzzle_board, empty_idx, empty_idx + 4)
-        new_node.g_cost = g_cost(new_node.puzzle_board)
+        new_node.g_cost = Get_g_cost(new_node.puzzle_board)
         heappush(prioq_bnb, (new_depth + new_node.g_cost, node_count, new_node))
 
     return node_count
@@ -121,9 +121,10 @@ def BranchAndBoundSolve(puzzle_board):
     node_count = 0
     current_node = PuzzleNode(puzzle_board, 0, "ROOT")
     node_path[str(puzzle_board)] = "ROOT"
-    node_count = GetPossibleNodes(node_count, prioq_bnb, current_node)
-    current_node = heappop(prioq_bnb)[2]
-    g_cost = current_node.g_cost
+    g_cost = Get_g_cost(puzzle_board)
+    if g_cost != 0:
+        node_count = GetPossibleNodes(node_count, prioq_bnb, current_node)
+        current_node = heappop(prioq_bnb)[2]
     # Dilakukan iterasi sampai semua ubin yang tidak kosong dalam list puzzle_board
     # sesuai pada tempatnya (goal node)
     while g_cost != 0:
@@ -148,11 +149,10 @@ if __name__ == "__main__":
     kurang_sum, list_kurang = GetListKurangAndSum(puzzle_board)
     if kurang_sum % 2 != 0:
         message = "Puzzle tidak bisa diselesaikan!"
-    elif g_cost(puzzle_board) == 0:
-        message = "Puzzle sudah terselesaikan, cari puzzle yang lain!"
     else:
         message = "Puzzle bisa diselesaikan, solusi sebagai berikut:"
         puzzle, node_path, node_count = BranchAndBoundSolve(puzzle_board)
+
     # Mematikan perhitungan eksekusi waktu
     runtime_end = time.time()
 
