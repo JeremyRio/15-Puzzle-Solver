@@ -16,7 +16,7 @@ if __name__ == "__main__":
         message = "Puzzle tidak bisa diselesaikan!"
     else:
         message = "Puzzle bisa diselesaikan, solusi sebagai berikut:"
-        puzzle, node_path = BranchAndBoundSolve(puzzle_board)
+        puzzle, node_path, node_count = BranchAndBoundSolve(puzzle_board)
 
     # Mendapatkan perhitungan waktu akhir program
     runtime_end = time.time()
@@ -43,4 +43,4 @@ if __name__ == "__main__":
             PrintPuzzle(node_solution[i])
         print("\nWaktu eksekusi: {:.4f} detik".format(
             runtime_end-runtime_start))
-        print(f"Jumlah simpul yang dibangkitkan: {len(node_path)}")
+        print(f"Jumlah simpul yang dibangkitkan: {node_count}")

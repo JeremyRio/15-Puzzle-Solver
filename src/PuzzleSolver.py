@@ -37,7 +37,7 @@ def ReadFile():
         try:
             puzzle_board = []
             filename = input("Masukkan nama file (tanpa .txt): ")
-            for raw_lines in open("tests/" + filename + ".txt", 'r'):
+            for raw_lines in open("../test/" + filename + ".txt", 'r'):
                 lines = raw_lines.replace("\n", "").split()
                 for line in lines:
                     puzzle_board.append(int(line))
@@ -172,4 +172,4 @@ def BranchAndBoundSolve(puzzle_board):
 
     if (str(current_node.puzzle_board) != str(puzzle_board)):
         node_path[str(current_node.puzzle_board)] = current_node.parent
-    return current_node.puzzle_board, node_path
+    return current_node.puzzle_board, node_path, node_count

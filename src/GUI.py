@@ -118,7 +118,7 @@ while True:
         if kurang_sum % 2 != 0:
             sg.popup("Puzzle ini tidak dapat diselesaikan")
         else:
-            puzzle, node_path = BranchAndBoundSolve(puzzle_board)
+            puzzle, node_path, node_count = BranchAndBoundSolve(puzzle_board)
             # Mendapatkan perhitungan waktu akhir program
             runtime_end = time.time()
 
@@ -134,7 +134,7 @@ while True:
             window["-WAKTU EKSEKUSI-"].update("Waktu eksekusi: {: .4f} detik".format(
                 runtime_end-runtime_start))
             window["-NODE BANGKIT-"].update(
-                f"Jumlah simpul yang dibangkitkan: {len(node_path)}")
+                f"Jumlah simpul yang dibangkitkan: {node_count}")
             for i in range(len(node_solution)):
                 for j in range(len(node_solution[i])):
                     window[f"-SLOT{j+1}-"].update(
