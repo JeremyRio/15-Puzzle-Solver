@@ -21,8 +21,7 @@ Program hanya dapat dijalankan menggunakan sistem operasi **Windows**. Terlebih 
 ```
 pip install pysimplegui
 ```
-Download juga folder repository `StimaTucil3`
-Untuk input Studi Kasus (_Test Case_) bagi program CLI, masukkan ke dalam folder `test` dan saat menjalankan programnya tidak perlu menggunakan ekstensi `.txt`
+Download juga folder repository `StimaTucil3` </br>
 
 ### * Menjalankan program CLI (_Command Line Interface_)
 1. Arahkan direktori terminal pada folder `src` dalam folder `StimaTucil3`</br>
@@ -35,6 +34,9 @@ py CLI.py
 ```
 
 ![image](https://user-images.githubusercontent.com/73146752/161429723-f768c222-cd8a-4d07-a5d6-6d8738a2888b.png)
+
+**[PENTING]** </br>
+Untuk input Studi Kasus (_Test Case_) bagi program CLI, masukkan ke dalam folder `test` dan saat menjalankan programnya tidak perlu menggunakan ekstensi `.txt`
 
 ### * Menjalankan program GUI (_Graphical User Interface_)
 ### 1. Cara Pertama
