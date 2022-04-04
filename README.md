@@ -16,50 +16,58 @@ Membuat program dalam Java/Python untuk menyelesaikan persoalan 15-Puzzle dengan
 - [pip](https://phoenixnap.com/kb/install-pip-windows)
 
 ## Penggunaan
+
 **[PENTING]** </br>
-Program hanya dapat dijalankan menggunakan sistem operasi **Windows**. Terlebih dahulu menginstall _requirements_ dan jalankan perintah berikut dalam terminal:
+Program hanya dapat dijalankan menggunakan sistem operasi **Windows**. Sebelum menjalankan program, terlebih dahulu meng-_install_ _requirements_, men-_download_ `StimaTucil3` dari repository ini, dan meng-_install_ `pysimplegui` dengan menjalankan perintah berikut dalam terminal:
 ```
 pip install pysimplegui
 ```
-Download juga folder repository `StimaTucil3` </br>
 
-## Menjalankan program CLI (_Command Line Interface_)
-1. Arahkan direktori terminal pada folder `src` dalam folder `StimaTucil3`</br>
 
-![image](https://user-images.githubusercontent.com/73146752/161429538-9a07cf61-3d86-43f0-8c5c-8b42b6e045d1.png)
-
-2. Jalankan perintah berikut untuk menjalankan program CLI: </br>
-```
-py CLI.py
-```
-
-![image](https://user-images.githubusercontent.com/73146752/161429723-f768c222-cd8a-4d07-a5d6-6d8738a2888b.png)
-
-**[PENTING]** </br>
-Untuk input Studi Kasus (_Test Case_) bagi program CLI, masukkan ke dalam folder `test` dan saat menjalankan programnya tidak perlu menggunakan ekstensi `.txt`
-
-## Menjalankan program GUI (_Graphical User Interface_)
+### Cara Menjalankan Program
 ### Alternatif 1
 1. Arahkan direktori terminal pada folder `src` dalam folder `StimaTucil3`</br>
 
 ![image](https://user-images.githubusercontent.com/73146752/161429538-9a07cf61-3d86-43f0-8c5c-8b42b6e045d1.png)
 
-2. Jalankan perintah berikut untuk menjalankan program GUI: </br>
+2. Jalankan perintah berikut untuk menjalankan program CLI:
+```
+py CLI.py
+```
+   atau perintah berikut untuk menjalankan program GUI:
 ```
 py GUI.py
 ```
+![image](https://user-images.githubusercontent.com/73146752/161533992-6bef9144-fda0-47c9-a922-06518f625300.png)
+![image](https://user-images.githubusercontent.com/73146752/161534057-493b47e2-ec66-42e2-8017-120855421609.png)
 
-![image](https://user-images.githubusercontent.com/73146752/161430114-c7d98da8-dda1-4a08-b6e7-e41001a170af.png)
+
 
 ### Alternatif 2
-1. Arahkan direktori folder kepada `bin` dalam folder `StimaTucil3` melalui file browser</br>
+1. Arahkan direktori folder kepada `bin` dalam folder `StimaTucil3` melalui file browser </br>
 
-![image](https://user-images.githubusercontent.com/73146752/161429916-3a6b36f8-e162-4b48-ac7b-34a77c314978.png)
+![image](https://user-images.githubusercontent.com/73146752/161531864-4d4b9772-ef1f-4983-8596-8f0e9a079f92.png)
 
-2. Jalankan file `Gui.bat`</br>
+2. Jalankan file `CLI.bat` atau `GUI.bat` berdasarkan _interface_ yang diinginkan </br>
 
-![image](https://user-images.githubusercontent.com/73146752/161429943-8813ba8e-10a8-4a3b-845d-e2bd59248a9b.png)
+### Langkah Penggunaan Program
 
+### Program CLI
+**[PENTING]** </br>
+Untuk penggunaan berkas studi kasus (_test case_) bagi program CLI, masukkan studi kasus ke dalam folder `test` dan harus berbentuk `.txt`
+
+1. Masukkan nama file studi kasus yang ingin diselesaikan tanpa menggunakan ekstensi `.txt`
+2. Menunggu program menyelesaikan puzzle :)
+
+![image](https://user-images.githubusercontent.com/73146752/161534917-4c5c60cb-4370-4c85-a72f-48d2c4245011.png)
+
+
+### Program GUI
+
+1. Masukkan file studi kasus yang ingin diselesaikan melalui tombol `Pilih File`
+2. Pilih tombol `Solve` dan tunggu program menyelesaikan puzzle :)
+
+![image](https://user-images.githubusercontent.com/73146752/161535014-c27f1a50-8caf-44c0-a995-286fd27da697.png)
 
 # Penulis
 Nama: Jeremy Rionaldo Pasaribu </br>
