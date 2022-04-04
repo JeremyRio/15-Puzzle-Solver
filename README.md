@@ -23,7 +23,7 @@ pip install pysimplegui
 ```
 Download juga folder repository `StimaTucil3` </br>
 
-### * Menjalankan program CLI (_Command Line Interface_)
+## Menjalankan program CLI (_Command Line Interface_)
 1. Arahkan direktori terminal pada folder `src` dalam folder `StimaTucil3`</br>
 
 ![image](https://user-images.githubusercontent.com/73146752/161429538-9a07cf61-3d86-43f0-8c5c-8b42b6e045d1.png)
@@ -38,7 +38,7 @@ py CLI.py
 **[PENTING]** </br>
 Untuk input Studi Kasus (_Test Case_) bagi program CLI, masukkan ke dalam folder `test` dan saat menjalankan programnya tidak perlu menggunakan ekstensi `.txt`
 
-### * Menjalankan program GUI (_Graphical User Interface_)
+## Menjalankan program GUI (_Graphical User Interface_)
 ### Alternatif 1
 1. Arahkan direktori terminal pada folder `src` dalam folder `StimaTucil3`</br>
 
