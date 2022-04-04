@@ -39,7 +39,7 @@ py CLI.py
 Untuk input Studi Kasus (_Test Case_) bagi program CLI, masukkan ke dalam folder `test` dan saat menjalankan programnya tidak perlu menggunakan ekstensi `.txt`
 
 ### * Menjalankan program GUI (_Graphical User Interface_)
-### 1. Cara Pertama
+### Alternatif 1
 1. Arahkan direktori terminal pada folder `src` dalam folder `StimaTucil3`</br>
 
 ![image](https://user-images.githubusercontent.com/73146752/161429538-9a07cf61-3d86-43f0-8c5c-8b42b6e045d1.png)
@@ -51,7 +51,7 @@ py GUI.py
 
 ![image](https://user-images.githubusercontent.com/73146752/161430114-c7d98da8-dda1-4a08-b6e7-e41001a170af.png)
 
-### 2. Cara Kedua
+### Alternatif 2
 1. Arahkan direktori folder kepada `bin` dalam folder `StimaTucil3` melalui file browser</br>
 
 ![image](https://user-images.githubusercontent.com/73146752/161429916-3a6b36f8-e162-4b48-ac7b-34a77c314978.png)
